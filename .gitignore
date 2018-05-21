@@ -1,0 +1,9 @@
+/.bundle
+/bundle
+/**/*.swp
+/log/*
+tmp/*
+/public/coverage
+/public/assets
+.rspec
+/config/login_jenkins.yml
