@@ -1,24 +1,28 @@
-# README
+# Bacheca
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+1) Configuration
+Add the jenkins credentials you will need to setup
 
-* Ruby version
+```bash
+touch db/login_jenkins.yml
+```
+here is how it should like the login_jenkins.yml
 
-* System dependencies
+```yml
+server_url: '0.0.0.0'
+username: 'somename', 
+password: 'secret password'
+```
 
-* Configuration
+the jobs_jenkins.yml should contain a list of jobs.
+```yml
+jenkins_jobs: ["manager-3.1-cucumber", "manager-3.0-cucumber"]
+```
 
-* Database creation
+2) Feed database
+WIP
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3) Visualize it
+WIP

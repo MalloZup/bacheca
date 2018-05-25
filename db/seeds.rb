@@ -29,13 +29,19 @@ module JenkinsClient
     filtered_jobs.each do |job_name|
       builds = @client.job.get_builds(job_name)
       builds.each do |build|
+        puts 'builds'
+        puts builds
+        puts "=========="
         # skip first build if not complete
         next if build['number'] == @client.job.get_current_build_number(job_name) && @client.job.get_current_build_status(job_name) == 'running'
+        puts "++++++++++++++"
+        puts "build detail"
+        puts @client.job.get_build_details(job_name, build['number'])
         begin
           json_resp = @client.api_get_request("/job/#{job_name}/#{build['number']}/testReport/")
           tests_failed = json_resp['failCount']
           puts tests_failed
-          Job.create(name: job_name.to_s, build: build['number'].to_i, tests_failed: tests_failed.to_i)
+ #         Job.create(name: job_name.to_s, build: build['number'].to_i, tests_failed: tests_failed.to_i)
         rescue JenkinsApi::Exceptions::NotFound
           puts 'testReport not found. skipping'
         end
