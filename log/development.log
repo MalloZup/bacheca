@@ -87,3 +87,1404 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-25 13:09:06 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:10
+  Rendered jobs/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuilddateToJobs (20180525114015)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "jobs" ADD "builddate" datetime[0m
+  ↳ db/migrate/20180525114015_add_builddate_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525114015"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuildtimestampToJobs (20180525114137)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "jobs" ADD "buildtimestamp" datetime[0m
+  ↳ db/migrate/20180525114137_add_buildtimestamp_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525114137"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-05-25 15:04:30 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:10
+  Rendered jobs/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateJobs (20180524105149)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "build" integer, "tests_failed" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180524105149_create_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180524105149"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuilddateToJobs (20180525114015)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "jobs" ADD "builddate" datetime[0m
+  ↳ db/migrate/20180525114015_add_builddate_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525114015"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuildtimestampToJobs (20180525114137)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "jobs" ADD "buildtimestamp" datetime[0m
+  ↳ db/migrate/20180525114137_add_buildtimestamp_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525114137"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-25 14:21:59.226837"], ["updated_at", "2018-05-25 14:21:59.226837"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3586], ["tests_failed", 0], ["created_at", "2018-05-25 14:22:53.314689"], ["updated_at", "2018-05-25 14:22:53.314689"], ["builddate", "2018-05-25 12:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3585], ["tests_failed", 0], ["created_at", "2018-05-25 14:22:54.056076"], ["updated_at", "2018-05-25 14:22:54.056076"], ["builddate", "2018-05-25 09:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3584], ["tests_failed", 1], ["created_at", "2018-05-25 14:22:54.803742"], ["updated_at", "2018-05-25 14:22:54.803742"], ["builddate", "2018-05-25 06:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3583], ["tests_failed", 0], ["created_at", "2018-05-25 14:22:55.553359"], ["updated_at", "2018-05-25 14:22:55.553359"], ["builddate", "2018-05-25 03:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3582], ["tests_failed", 0], ["created_at", "2018-05-25 14:22:57.329472"], ["updated_at", "2018-05-25 14:22:57.329472"], ["builddate", "2018-05-25 00:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3581], ["tests_failed", 0], ["created_at", "2018-05-25 14:22:58.311667"], ["updated_at", "2018-05-25 14:22:58.311667"], ["builddate", "2018-05-24 21:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3580], ["tests_failed", 0], ["created_at", "2018-05-25 14:22:59.035408"], ["updated_at", "2018-05-25 14:22:59.035408"], ["builddate", "2018-05-24 18:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3579], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:00.798995"], ["updated_at", "2018-05-25 14:23:00.798995"], ["builddate", "2018-05-24 15:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3578], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:01.586533"], ["updated_at", "2018-05-25 14:23:01.586533"], ["builddate", "2018-05-24 12:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3577], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:02.647526"], ["updated_at", "2018-05-25 14:23:02.647526"], ["builddate", "2018-05-24 09:53:18"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3576], ["tests_failed", 3], ["created_at", "2018-05-25 14:23:03.436632"], ["updated_at", "2018-05-25 14:23:03.436632"], ["builddate", "2018-05-24 06:53:18"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (3.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3573], ["tests_failed", 63], ["created_at", "2018-05-25 14:23:05.547348"], ["updated_at", "2018-05-25 14:23:05.547348"], ["builddate", "2018-05-23 21:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3572], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:06.758800"], ["updated_at", "2018-05-25 14:23:06.758800"], ["builddate", "2018-05-23 18:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3571], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:07.570067"], ["updated_at", "2018-05-25 14:23:07.570067"], ["builddate", "2018-05-23 15:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3570], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:08.993633"], ["updated_at", "2018-05-25 14:23:08.993633"], ["builddate", "2018-05-23 12:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3569], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:14.873571"], ["updated_at", "2018-05-25 14:23:14.873571"], ["builddate", "2018-05-23 09:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3568], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:15.724029"], ["updated_at", "2018-05-25 14:23:15.724029"], ["builddate", "2018-05-23 06:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3567], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:16.605660"], ["updated_at", "2018-05-25 14:23:16.605660"], ["builddate", "2018-05-23 03:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3566], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:17.456339"], ["updated_at", "2018-05-25 14:23:17.456339"], ["builddate", "2018-05-23 00:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3565], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:18.833277"], ["updated_at", "2018-05-25 14:23:18.833277"], ["builddate", "2018-05-22 21:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3564], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:19.736009"], ["updated_at", "2018-05-25 14:23:19.736009"], ["builddate", "2018-05-22 18:53:19"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3563], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:20.707034"], ["updated_at", "2018-05-25 14:23:20.707034"], ["builddate", "2018-05-22 15:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3562], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:21.546971"], ["updated_at", "2018-05-25 14:23:21.546971"], ["builddate", "2018-05-22 12:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3561], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:22.398683"], ["updated_at", "2018-05-25 14:23:22.398683"], ["builddate", "2018-05-22 09:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3560], ["tests_failed", 2], ["created_at", "2018-05-25 14:23:23.270640"], ["updated_at", "2018-05-25 14:23:23.270640"], ["builddate", "2018-05-22 06:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3559], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:24.098907"], ["updated_at", "2018-05-25 14:23:24.098907"], ["builddate", "2018-05-22 03:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3558], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:25.020866"], ["updated_at", "2018-05-25 14:23:25.020866"], ["builddate", "2018-05-22 00:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (18.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3557], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:25.878410"], ["updated_at", "2018-05-25 14:23:25.878410"], ["builddate", "2018-05-21 21:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3556], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:26.760787"], ["updated_at", "2018-05-25 14:23:26.760787"], ["builddate", "2018-05-21 18:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3555], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:27.661177"], ["updated_at", "2018-05-25 14:23:27.661177"], ["builddate", "2018-05-21 15:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3554], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:28.504205"], ["updated_at", "2018-05-25 14:23:28.504205"], ["builddate", "2018-05-21 12:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3553], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:29.395703"], ["updated_at", "2018-05-25 14:23:29.395703"], ["builddate", "2018-05-21 09:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3552], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:30.246010"], ["updated_at", "2018-05-25 14:23:30.246010"], ["builddate", "2018-05-21 06:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3551], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:31.173308"], ["updated_at", "2018-05-25 14:23:31.173308"], ["builddate", "2018-05-21 03:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3550], ["tests_failed", 2], ["created_at", "2018-05-25 14:23:32.336421"], ["updated_at", "2018-05-25 14:23:32.336421"], ["builddate", "2018-05-21 00:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3548], ["tests_failed", 2], ["created_at", "2018-05-25 14:23:33.655222"], ["updated_at", "2018-05-25 14:23:33.655222"], ["builddate", "2018-05-20 18:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3547], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:34.513352"], ["updated_at", "2018-05-25 14:23:34.513352"], ["builddate", "2018-05-20 15:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3546], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:35.371626"], ["updated_at", "2018-05-25 14:23:35.371626"], ["builddate", "2018-05-20 12:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (3.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3545], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:36.228352"], ["updated_at", "2018-05-25 14:23:36.228352"], ["builddate", "2018-05-20 09:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3544], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:37.084833"], ["updated_at", "2018-05-25 14:23:37.084833"], ["builddate", "2018-05-20 06:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3543], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:38.211815"], ["updated_at", "2018-05-25 14:23:38.211815"], ["builddate", "2018-05-20 03:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3542], ["tests_failed", 2], ["created_at", "2018-05-25 14:23:39.407655"], ["updated_at", "2018-05-25 14:23:39.407655"], ["builddate", "2018-05-20 00:53:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2821], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:42.790944"], ["updated_at", "2018-05-25 14:23:42.790944"], ["builddate", "2018-05-25 09:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2820], ["tests_failed", 16], ["created_at", "2018-05-25 14:23:44.025684"], ["updated_at", "2018-05-25 14:23:44.025684"], ["builddate", "2018-05-25 05:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2819], ["tests_failed", 15], ["created_at", "2018-05-25 14:23:45.146228"], ["updated_at", "2018-05-25 14:23:45.146228"], ["builddate", "2018-05-25 01:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2818], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:46.310385"], ["updated_at", "2018-05-25 14:23:46.310385"], ["builddate", "2018-05-24 21:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2817], ["tests_failed", 15], ["created_at", "2018-05-25 14:23:47.501901"], ["updated_at", "2018-05-25 14:23:47.501901"], ["builddate", "2018-05-24 17:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2816], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:49.485131"], ["updated_at", "2018-05-25 14:23:49.485131"], ["builddate", "2018-05-24 13:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2815], ["tests_failed", 2], ["created_at", "2018-05-25 14:23:50.707240"], ["updated_at", "2018-05-25 14:23:50.707240"], ["builddate", "2018-05-24 09:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2814], ["tests_failed", 547], ["created_at", "2018-05-25 14:23:52.637222"], ["updated_at", "2018-05-25 14:23:52.637222"], ["builddate", "2018-05-24 05:19:18"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2812], ["tests_failed", 1], ["created_at", "2018-05-25 14:23:54.459424"], ["updated_at", "2018-05-25 14:23:54.459424"], ["builddate", "2018-05-23 21:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2811], ["tests_failed", 5], ["created_at", "2018-05-25 14:23:55.364015"], ["updated_at", "2018-05-25 14:23:55.364015"], ["builddate", "2018-05-23 17:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2810], ["tests_failed", 15], ["created_at", "2018-05-25 14:23:56.271638"], ["updated_at", "2018-05-25 14:23:56.271638"], ["builddate", "2018-05-23 13:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2809], ["tests_failed", 15], ["created_at", "2018-05-25 14:23:57.293640"], ["updated_at", "2018-05-25 14:23:57.293640"], ["builddate", "2018-05-23 09:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2808], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:58.231174"], ["updated_at", "2018-05-25 14:23:58.231174"], ["builddate", "2018-05-23 05:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2807], ["tests_failed", 0], ["created_at", "2018-05-25 14:23:59.144027"], ["updated_at", "2018-05-25 14:23:59.144027"], ["builddate", "2018-05-23 01:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2806], ["tests_failed", 14], ["created_at", "2018-05-25 14:24:00.139312"], ["updated_at", "2018-05-25 14:24:00.139312"], ["builddate", "2018-05-22 21:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2805], ["tests_failed", 5], ["created_at", "2018-05-25 14:24:01.036277"], ["updated_at", "2018-05-25 14:24:01.036277"], ["builddate", "2018-05-22 17:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2804], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:02.260062"], ["updated_at", "2018-05-25 14:24:02.260062"], ["builddate", "2018-05-22 13:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2803], ["tests_failed", 15], ["created_at", "2018-05-25 14:24:03.152638"], ["updated_at", "2018-05-25 14:24:03.152638"], ["builddate", "2018-05-22 09:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2802], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:04.027499"], ["updated_at", "2018-05-25 14:24:04.027499"], ["builddate", "2018-05-22 05:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2801], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:04.919855"], ["updated_at", "2018-05-25 14:24:04.919855"], ["builddate", "2018-05-22 01:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2800], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:05.874061"], ["updated_at", "2018-05-25 14:24:05.874061"], ["builddate", "2018-05-21 21:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2799], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:07.519007"], ["updated_at", "2018-05-25 14:24:07.519007"], ["builddate", "2018-05-21 17:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2798], ["tests_failed", 14], ["created_at", "2018-05-25 14:24:08.439822"], ["updated_at", "2018-05-25 14:24:08.439822"], ["builddate", "2018-05-21 13:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2797], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:10.450432"], ["updated_at", "2018-05-25 14:24:10.450432"], ["builddate", "2018-05-21 09:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2796], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:11.386864"], ["updated_at", "2018-05-25 14:24:11.386864"], ["builddate", "2018-05-21 05:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2795], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:12.382582"], ["updated_at", "2018-05-25 14:24:12.382582"], ["builddate", "2018-05-21 01:39:22"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2794], ["tests_failed", 546], ["created_at", "2018-05-25 14:24:13.618098"], ["updated_at", "2018-05-25 14:24:13.618098"], ["builddate", "2018-05-20 21:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2793], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:14.516625"], ["updated_at", "2018-05-25 14:24:14.516625"], ["builddate", "2018-05-20 17:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2792], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:15.439946"], ["updated_at", "2018-05-25 14:24:15.439946"], ["builddate", "2018-05-20 13:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2791], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:16.632410"], ["updated_at", "2018-05-25 14:24:16.632410"], ["builddate", "2018-05-20 09:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2790], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:18.229520"], ["updated_at", "2018-05-25 14:24:18.229520"], ["builddate", "2018-05-20 05:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2789], ["tests_failed", 14], ["created_at", "2018-05-25 14:24:19.314845"], ["updated_at", "2018-05-25 14:24:19.314845"], ["builddate", "2018-05-20 01:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2788], ["tests_failed", 1], ["created_at", "2018-05-25 14:24:20.283658"], ["updated_at", "2018-05-25 14:24:20.283658"], ["builddate", "2018-05-19 21:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2787], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:21.232319"], ["updated_at", "2018-05-25 14:24:21.232319"], ["builddate", "2018-05-19 17:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2786], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:22.162827"], ["updated_at", "2018-05-25 14:24:22.162827"], ["builddate", "2018-05-19 13:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2785], ["tests_failed", 1], ["created_at", "2018-05-25 14:24:23.306356"], ["updated_at", "2018-05-25 14:24:23.306356"], ["builddate", "2018-05-19 09:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2784], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:25.504769"], ["updated_at", "2018-05-25 14:24:25.504769"], ["builddate", "2018-05-19 05:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2783], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:27.056189"], ["updated_at", "2018-05-25 14:24:27.056189"], ["builddate", "2018-05-19 01:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2781], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:28.417881"], ["updated_at", "2018-05-25 14:24:28.417881"], ["builddate", "2018-05-18 17:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2780], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:29.357144"], ["updated_at", "2018-05-25 14:24:29.357144"], ["builddate", "2018-05-18 13:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2779], ["tests_failed", 14], ["created_at", "2018-05-25 14:24:30.259722"], ["updated_at", "2018-05-25 14:24:30.259722"], ["builddate", "2018-05-18 09:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2778], ["tests_failed", 14], ["created_at", "2018-05-25 14:24:31.223044"], ["updated_at", "2018-05-25 14:24:31.223044"], ["builddate", "2018-05-18 05:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2777], ["tests_failed", 0], ["created_at", "2018-05-25 14:24:32.103388"], ["updated_at", "2018-05-25 14:24:32.103388"], ["builddate", "2018-05-18 01:19:17"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+Started GET "/" for 127.0.0.1 at 2018-05-25 16:25:18 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:10
+  Rendered jobs/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3586], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:35.314679"], ["updated_at", "2018-05-25 14:27:35.314679"], ["builddate", "2018-05-25 12:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3585], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:36.044116"], ["updated_at", "2018-05-25 14:27:36.044116"], ["builddate", "2018-05-25 09:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3584], ["tests_failed", 1], ["created_at", "2018-05-25 14:27:36.836647"], ["updated_at", "2018-05-25 14:27:36.836647"], ["builddate", "2018-05-25 06:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3583], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:37.646148"], ["updated_at", "2018-05-25 14:27:37.646148"], ["builddate", "2018-05-25 03:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3582], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:38.853762"], ["updated_at", "2018-05-25 14:27:38.853762"], ["builddate", "2018-05-25 00:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3581], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:39.595984"], ["updated_at", "2018-05-25 14:27:39.595984"], ["builddate", "2018-05-24 21:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3580], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:40.327474"], ["updated_at", "2018-05-25 14:27:40.327474"], ["builddate", "2018-05-24 18:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3579], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:41.062828"], ["updated_at", "2018-05-25 14:27:41.062828"], ["builddate", "2018-05-24 15:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3578], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:41.800294"], ["updated_at", "2018-05-25 14:27:41.800294"], ["builddate", "2018-05-24 12:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3577], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:42.596928"], ["updated_at", "2018-05-25 14:27:42.596928"], ["builddate", "2018-05-24 09:53:18"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3576], ["tests_failed", 3], ["created_at", "2018-05-25 14:27:43.509402"], ["updated_at", "2018-05-25 14:27:43.509402"], ["builddate", "2018-05-24 06:53:18"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3573], ["tests_failed", 63], ["created_at", "2018-05-25 14:27:46.443802"], ["updated_at", "2018-05-25 14:27:46.443802"], ["builddate", "2018-05-23 21:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3572], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:47.253907"], ["updated_at", "2018-05-25 14:27:47.253907"], ["builddate", "2018-05-23 18:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3571], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:48.284931"], ["updated_at", "2018-05-25 14:27:48.284931"], ["builddate", "2018-05-23 15:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3570], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:49.100784"], ["updated_at", "2018-05-25 14:27:49.100784"], ["builddate", "2018-05-23 12:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3569], ["tests_failed", 1], ["created_at", "2018-05-25 14:27:50.056133"], ["updated_at", "2018-05-25 14:27:50.056133"], ["builddate", "2018-05-23 09:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3568], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:50.777387"], ["updated_at", "2018-05-25 14:27:50.777387"], ["builddate", "2018-05-23 06:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (2.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3567], ["tests_failed", 1], ["created_at", "2018-05-25 14:27:51.906385"], ["updated_at", "2018-05-25 14:27:51.906385"], ["builddate", "2018-05-23 03:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3566], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:54.932183"], ["updated_at", "2018-05-25 14:27:54.932183"], ["builddate", "2018-05-23 00:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3565], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:56.479958"], ["updated_at", "2018-05-25 14:27:56.479958"], ["builddate", "2018-05-22 21:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3564], ["tests_failed", 0], ["created_at", "2018-05-25 14:27:58.434529"], ["updated_at", "2018-05-25 14:27:58.434529"], ["builddate", "2018-05-22 18:53:19"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (2.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3563], ["tests_failed", 1], ["created_at", "2018-05-25 14:27:59.180963"], ["updated_at", "2018-05-25 14:27:59.180963"], ["builddate", "2018-05-22 15:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3562], ["tests_failed", 1], ["created_at", "2018-05-25 14:27:59.918381"], ["updated_at", "2018-05-25 14:27:59.918381"], ["builddate", "2018-05-22 12:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3561], ["tests_failed", 1], ["created_at", "2018-05-25 14:28:00.658414"], ["updated_at", "2018-05-25 14:28:00.658414"], ["builddate", "2018-05-22 09:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "builddate") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3560], ["tests_failed", 2], ["created_at", "2018-05-25 14:28:01.371346"], ["updated_at", "2018-05-25 14:28:01.371346"], ["builddate", "2018-05-22 06:53:17"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to DropBuilddate (20180525143045)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525143045"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to DropBuildtimestamp (20180525143114)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525143114"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuildDateToJobs (20180525143436)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "jobs" ADD "build_date" varchar[0m
+  ↳ db/migrate/20180525143436_add_build_date_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525143436"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuildTimestampToJobs (20180525144746)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "jobs" ADD "build_timestamp" bigint[0m
+  ↳ db/migrate/20180525144746_add_build_timestamp_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525144746"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateJobs (20180524105149)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "build" integer, "tests_failed" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180524105149_create_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180524105149"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuildDateToJobs (20180525143436)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "jobs" ADD "build_date" varchar[0m
+  ↳ db/migrate/20180525143436_add_build_date_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525143436"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuildTimestampToJobs (20180525144746)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "jobs" ADD "build_timestamp" bigint[0m
+  ↳ db/migrate/20180525144746_add_build_timestamp_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525144746"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-25 14:48:00.249712"], ["updated_at", "2018-05-25 14:48:00.249712"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3586], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:25.731892"], ["updated_at", "2018-05-25 14:50:25.731892"], ["build_date", "2018-05-25T14:53:17+02:00"], ["build_timestamp", 1527252797100]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3585], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:27.064503"], ["updated_at", "2018-05-25 14:50:27.064503"], ["build_date", "2018-05-25T11:53:17+02:00"], ["build_timestamp", 1527241997374]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3584], ["tests_failed", 1], ["created_at", "2018-05-25 14:50:27.826787"], ["updated_at", "2018-05-25 14:50:27.826787"], ["build_date", "2018-05-25T08:53:17+02:00"], ["build_timestamp", 1527231197309]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3583], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:28.846610"], ["updated_at", "2018-05-25 14:50:28.846610"], ["build_date", "2018-05-25T05:53:17+02:00"], ["build_timestamp", 1527220397165]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3582], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:29.846449"], ["updated_at", "2018-05-25 14:50:29.846449"], ["build_date", "2018-05-25T02:53:17+02:00"], ["build_timestamp", 1527209597100]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3581], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:30.987119"], ["updated_at", "2018-05-25 14:50:30.987119"], ["build_date", "2018-05-24T23:53:17+02:00"], ["build_timestamp", 1527198797154]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3580], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:31.792549"], ["updated_at", "2018-05-25 14:50:31.792549"], ["build_date", "2018-05-24T20:53:17+02:00"], ["build_timestamp", 1527187997270]]
+  ↳ db/seeds.rb:44
+  [1m[35m (17.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3579], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:32.602888"], ["updated_at", "2018-05-25 14:50:32.602888"], ["build_date", "2018-05-24T17:53:17+02:00"], ["build_timestamp", 1527177197564]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3578], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:33.933597"], ["updated_at", "2018-05-25 14:50:33.933597"], ["build_date", "2018-05-24T14:53:17+02:00"], ["build_timestamp", 1527166397330]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3577], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:34.733955"], ["updated_at", "2018-05-25 14:50:34.733955"], ["build_date", "2018-05-24T11:53:18+02:00"], ["build_timestamp", 1527155598167]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3576], ["tests_failed", 3], ["created_at", "2018-05-25 14:50:35.538878"], ["updated_at", "2018-05-25 14:50:35.538878"], ["build_date", "2018-05-24T08:53:18+02:00"], ["build_timestamp", 1527144798738]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3573], ["tests_failed", 63], ["created_at", "2018-05-25 14:50:37.340089"], ["updated_at", "2018-05-25 14:50:37.340089"], ["build_date", "2018-05-23T23:53:17+02:00"], ["build_timestamp", 1527112397066]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3572], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:38.186888"], ["updated_at", "2018-05-25 14:50:38.186888"], ["build_date", "2018-05-23T20:53:17+02:00"], ["build_timestamp", 1527101597560]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3571], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:38.982915"], ["updated_at", "2018-05-25 14:50:38.982915"], ["build_date", "2018-05-23T17:53:17+02:00"], ["build_timestamp", 1527090797125]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3570], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:39.752970"], ["updated_at", "2018-05-25 14:50:39.752970"], ["build_date", "2018-05-23T14:53:17+02:00"], ["build_timestamp", 1527079997087]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3569], ["tests_failed", 1], ["created_at", "2018-05-25 14:50:40.574036"], ["updated_at", "2018-05-25 14:50:40.574036"], ["build_date", "2018-05-23T11:53:17+02:00"], ["build_timestamp", 1527069197415]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3568], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:41.415091"], ["updated_at", "2018-05-25 14:50:41.415091"], ["build_date", "2018-05-23T08:53:17+02:00"], ["build_timestamp", 1527058397681]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3567], ["tests_failed", 1], ["created_at", "2018-05-25 14:50:42.159254"], ["updated_at", "2018-05-25 14:50:42.159254"], ["build_date", "2018-05-23T05:53:17+02:00"], ["build_timestamp", 1527047597173]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3566], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:43.004528"], ["updated_at", "2018-05-25 14:50:43.004528"], ["build_date", "2018-05-23T02:53:17+02:00"], ["build_timestamp", 1527036797270]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3565], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:43.774522"], ["updated_at", "2018-05-25 14:50:43.774522"], ["build_date", "2018-05-22T23:53:17+02:00"], ["build_timestamp", 1527025997183]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3564], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:44.534799"], ["updated_at", "2018-05-25 14:50:44.534799"], ["build_date", "2018-05-22T20:53:19+02:00"], ["build_timestamp", 1527015199964]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3563], ["tests_failed", 1], ["created_at", "2018-05-25 14:50:45.308686"], ["updated_at", "2018-05-25 14:50:45.308686"], ["build_date", "2018-05-22T17:53:17+02:00"], ["build_timestamp", 1527004397074]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3562], ["tests_failed", 1], ["created_at", "2018-05-25 14:50:46.092878"], ["updated_at", "2018-05-25 14:50:46.092878"], ["build_date", "2018-05-22T14:53:17+02:00"], ["build_timestamp", 1526993597164]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3561], ["tests_failed", 1], ["created_at", "2018-05-25 14:50:46.853364"], ["updated_at", "2018-05-25 14:50:46.853364"], ["build_date", "2018-05-22T11:53:17+02:00"], ["build_timestamp", 1526982797340]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3560], ["tests_failed", 2], ["created_at", "2018-05-25 14:50:47.648060"], ["updated_at", "2018-05-25 14:50:47.648060"], ["build_date", "2018-05-22T08:53:17+02:00"], ["build_timestamp", 1526971997230]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3559], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:48.459972"], ["updated_at", "2018-05-25 14:50:48.459972"], ["build_date", "2018-05-22T05:53:17+02:00"], ["build_timestamp", 1526961197397]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3558], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:49.400844"], ["updated_at", "2018-05-25 14:50:49.400844"], ["build_date", "2018-05-22T02:53:17+02:00"], ["build_timestamp", 1526950397165]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3557], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:50.174500"], ["updated_at", "2018-05-25 14:50:50.174500"], ["build_date", "2018-05-21T23:53:17+02:00"], ["build_timestamp", 1526939597235]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3556], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:50.948737"], ["updated_at", "2018-05-25 14:50:50.948737"], ["build_date", "2018-05-21T20:53:17+02:00"], ["build_timestamp", 1526928797457]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3555], ["tests_failed", 1], ["created_at", "2018-05-25 14:50:51.705695"], ["updated_at", "2018-05-25 14:50:51.705695"], ["build_date", "2018-05-21T17:53:17+02:00"], ["build_timestamp", 1526917997191]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3554], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:52.608264"], ["updated_at", "2018-05-25 14:50:52.608264"], ["build_date", "2018-05-21T14:53:17+02:00"], ["build_timestamp", 1526907197091]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3553], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:53.459437"], ["updated_at", "2018-05-25 14:50:53.459437"], ["build_date", "2018-05-21T11:53:17+02:00"], ["build_timestamp", 1526896397088]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3552], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:54.285097"], ["updated_at", "2018-05-25 14:50:54.285097"], ["build_date", "2018-05-21T08:53:17+02:00"], ["build_timestamp", 1526885597781]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3551], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:55.107339"], ["updated_at", "2018-05-25 14:50:55.107339"], ["build_date", "2018-05-21T05:53:17+02:00"], ["build_timestamp", 1526874797393]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3550], ["tests_failed", 2], ["created_at", "2018-05-25 14:50:56.025860"], ["updated_at", "2018-05-25 14:50:56.025860"], ["build_date", "2018-05-21T02:53:17+02:00"], ["build_timestamp", 1526863997634]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3548], ["tests_failed", 2], ["created_at", "2018-05-25 14:50:57.318973"], ["updated_at", "2018-05-25 14:50:57.318973"], ["build_date", "2018-05-20T20:53:17+02:00"], ["build_timestamp", 1526842397452]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3547], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:58.078594"], ["updated_at", "2018-05-25 14:50:58.078594"], ["build_date", "2018-05-20T17:53:17+02:00"], ["build_timestamp", 1526831597329]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3546], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:58.848043"], ["updated_at", "2018-05-25 14:50:58.848043"], ["build_date", "2018-05-20T14:53:17+02:00"], ["build_timestamp", 1526820797159]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3545], ["tests_failed", 0], ["created_at", "2018-05-25 14:50:59.762016"], ["updated_at", "2018-05-25 14:50:59.762016"], ["build_date", "2018-05-20T11:53:17+02:00"], ["build_timestamp", 1526809997518]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3544], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:00.534121"], ["updated_at", "2018-05-25 14:51:00.534121"], ["build_date", "2018-05-20T08:53:17+02:00"], ["build_timestamp", 1526799197347]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3543], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:01.376303"], ["updated_at", "2018-05-25 14:51:01.376303"], ["build_date", "2018-05-20T05:53:17+02:00"], ["build_timestamp", 1526788397190]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3542], ["tests_failed", 2], ["created_at", "2018-05-25 14:51:02.124475"], ["updated_at", "2018-05-25 14:51:02.124475"], ["build_date", "2018-05-20T02:53:17+02:00"], ["build_timestamp", 1526777597224]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2821], ["tests_failed", 1], ["created_at", "2018-05-25 14:51:04.844131"], ["updated_at", "2018-05-25 14:51:04.844131"], ["build_date", "2018-05-25T11:19:17+02:00"], ["build_timestamp", 1527239957006]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2820], ["tests_failed", 16], ["created_at", "2018-05-25 14:51:05.676728"], ["updated_at", "2018-05-25 14:51:05.676728"], ["build_date", "2018-05-25T07:19:17+02:00"], ["build_timestamp", 1527225557219]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2819], ["tests_failed", 15], ["created_at", "2018-05-25 14:51:06.608296"], ["updated_at", "2018-05-25 14:51:06.608296"], ["build_date", "2018-05-25T03:19:17+02:00"], ["build_timestamp", 1527211157172]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2818], ["tests_failed", 1], ["created_at", "2018-05-25 14:51:07.446465"], ["updated_at", "2018-05-25 14:51:07.446465"], ["build_date", "2018-05-24T23:19:17+02:00"], ["build_timestamp", 1527196757115]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2817], ["tests_failed", 15], ["created_at", "2018-05-25 14:51:08.272251"], ["updated_at", "2018-05-25 14:51:08.272251"], ["build_date", "2018-05-24T19:19:17+02:00"], ["build_timestamp", 1527182357218]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2816], ["tests_failed", 1], ["created_at", "2018-05-25 14:51:09.117129"], ["updated_at", "2018-05-25 14:51:09.117129"], ["build_date", "2018-05-24T15:19:17+02:00"], ["build_timestamp", 1527167957382]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2815], ["tests_failed", 2], ["created_at", "2018-05-25 14:51:10.169436"], ["updated_at", "2018-05-25 14:51:10.169436"], ["build_date", "2018-05-24T11:19:17+02:00"], ["build_timestamp", 1527153557616]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2814], ["tests_failed", 547], ["created_at", "2018-05-25 14:51:11.319072"], ["updated_at", "2018-05-25 14:51:11.319072"], ["build_date", "2018-05-24T07:19:18+02:00"], ["build_timestamp", 1527139158252]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2812], ["tests_failed", 1], ["created_at", "2018-05-25 14:51:12.867388"], ["updated_at", "2018-05-25 14:51:12.867388"], ["build_date", "2018-05-23T23:19:17+02:00"], ["build_timestamp", 1527110357217]]
+  ↳ db/seeds.rb:44
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2811], ["tests_failed", 5], ["created_at", "2018-05-25 14:51:13.927015"], ["updated_at", "2018-05-25 14:51:13.927015"], ["build_date", "2018-05-23T19:19:17+02:00"], ["build_timestamp", 1527095957466]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2810], ["tests_failed", 15], ["created_at", "2018-05-25 14:51:14.809868"], ["updated_at", "2018-05-25 14:51:14.809868"], ["build_date", "2018-05-23T15:19:17+02:00"], ["build_timestamp", 1527081557350]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2809], ["tests_failed", 15], ["created_at", "2018-05-25 14:51:15.653981"], ["updated_at", "2018-05-25 14:51:15.653981"], ["build_date", "2018-05-23T11:19:17+02:00"], ["build_timestamp", 1527067157224]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2808], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:16.527441"], ["updated_at", "2018-05-25 14:51:16.527441"], ["build_date", "2018-05-23T07:19:17+02:00"], ["build_timestamp", 1527052757427]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2807], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:17.821529"], ["updated_at", "2018-05-25 14:51:17.821529"], ["build_date", "2018-05-23T03:19:17+02:00"], ["build_timestamp", 1527038357199]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2806], ["tests_failed", 14], ["created_at", "2018-05-25 14:51:18.700203"], ["updated_at", "2018-05-25 14:51:18.700203"], ["build_date", "2018-05-22T23:19:17+02:00"], ["build_timestamp", 1527023957001]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2805], ["tests_failed", 5], ["created_at", "2018-05-25 14:51:19.695672"], ["updated_at", "2018-05-25 14:51:19.695672"], ["build_date", "2018-05-22T19:19:17+02:00"], ["build_timestamp", 1527009557068]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2804], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:20.577460"], ["updated_at", "2018-05-25 14:51:20.577460"], ["build_date", "2018-05-22T15:19:17+02:00"], ["build_timestamp", 1526995157085]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2803], ["tests_failed", 15], ["created_at", "2018-05-25 14:51:21.440674"], ["updated_at", "2018-05-25 14:51:21.440674"], ["build_date", "2018-05-22T11:19:17+02:00"], ["build_timestamp", 1526980757074]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2802], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:22.404645"], ["updated_at", "2018-05-25 14:51:22.404645"], ["build_date", "2018-05-22T07:19:17+02:00"], ["build_timestamp", 1526966357168]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2801], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:23.280299"], ["updated_at", "2018-05-25 14:51:23.280299"], ["build_date", "2018-05-22T03:19:17+02:00"], ["build_timestamp", 1526951957262]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2800], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:24.119405"], ["updated_at", "2018-05-25 14:51:24.119405"], ["build_date", "2018-05-21T23:19:17+02:00"], ["build_timestamp", 1526937557155]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2799], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:25.014124"], ["updated_at", "2018-05-25 14:51:25.014124"], ["build_date", "2018-05-21T19:19:17+02:00"], ["build_timestamp", 1526923157144]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2798], ["tests_failed", 14], ["created_at", "2018-05-25 14:51:26.071968"], ["updated_at", "2018-05-25 14:51:26.071968"], ["build_date", "2018-05-21T15:19:17+02:00"], ["build_timestamp", 1526908757124]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2797], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:26.925205"], ["updated_at", "2018-05-25 14:51:26.925205"], ["build_date", "2018-05-21T11:19:17+02:00"], ["build_timestamp", 1526894357246]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2796], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:27.928812"], ["updated_at", "2018-05-25 14:51:27.928812"], ["build_date", "2018-05-21T07:19:17+02:00"], ["build_timestamp", 1526879957224]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2795], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:29.031578"], ["updated_at", "2018-05-25 14:51:29.031578"], ["build_date", "2018-05-21T03:39:22+02:00"], ["build_timestamp", 1526866762264]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2794], ["tests_failed", 546], ["created_at", "2018-05-25 14:51:30.341316"], ["updated_at", "2018-05-25 14:51:30.341316"], ["build_date", "2018-05-20T23:19:17+02:00"], ["build_timestamp", 1526851157187]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2793], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:31.565336"], ["updated_at", "2018-05-25 14:51:31.565336"], ["build_date", "2018-05-20T19:19:17+02:00"], ["build_timestamp", 1526836757212]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2792], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:32.760574"], ["updated_at", "2018-05-25 14:51:32.760574"], ["build_date", "2018-05-20T15:19:17+02:00"], ["build_timestamp", 1526822357205]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2791], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:33.733903"], ["updated_at", "2018-05-25 14:51:33.733903"], ["build_date", "2018-05-20T11:19:17+02:00"], ["build_timestamp", 1526807957140]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2790], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:34.650762"], ["updated_at", "2018-05-25 14:51:34.650762"], ["build_date", "2018-05-20T07:19:17+02:00"], ["build_timestamp", 1526793557197]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2789], ["tests_failed", 14], ["created_at", "2018-05-25 14:51:35.475212"], ["updated_at", "2018-05-25 14:51:35.475212"], ["build_date", "2018-05-20T03:19:17+02:00"], ["build_timestamp", 1526779157048]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2788], ["tests_failed", 1], ["created_at", "2018-05-25 14:51:36.393053"], ["updated_at", "2018-05-25 14:51:36.393053"], ["build_date", "2018-05-19T23:19:17+02:00"], ["build_timestamp", 1526764757174]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2787], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:37.215092"], ["updated_at", "2018-05-25 14:51:37.215092"], ["build_date", "2018-05-19T19:19:17+02:00"], ["build_timestamp", 1526750357164]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2786], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:38.034989"], ["updated_at", "2018-05-25 14:51:38.034989"], ["build_date", "2018-05-19T15:19:17+02:00"], ["build_timestamp", 1526735957211]]
+  ↳ db/seeds.rb:44
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2785], ["tests_failed", 1], ["created_at", "2018-05-25 14:51:39.054800"], ["updated_at", "2018-05-25 14:51:39.054800"], ["build_date", "2018-05-19T11:19:17+02:00"], ["build_timestamp", 1526721557218]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2784], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:39.908116"], ["updated_at", "2018-05-25 14:51:39.908116"], ["build_date", "2018-05-19T07:19:17+02:00"], ["build_timestamp", 1526707157195]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2783], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:41.031114"], ["updated_at", "2018-05-25 14:51:41.031114"], ["build_date", "2018-05-19T03:19:17+02:00"], ["build_timestamp", 1526692757039]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2781], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:42.357288"], ["updated_at", "2018-05-25 14:51:42.357288"], ["build_date", "2018-05-18T19:19:17+02:00"], ["build_timestamp", 1526663957185]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2780], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:43.190200"], ["updated_at", "2018-05-25 14:51:43.190200"], ["build_date", "2018-05-18T15:19:17+02:00"], ["build_timestamp", 1526649557127]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2779], ["tests_failed", 14], ["created_at", "2018-05-25 14:51:44.382464"], ["updated_at", "2018-05-25 14:51:44.382464"], ["build_date", "2018-05-18T11:19:17+02:00"], ["build_timestamp", 1526635157154]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2778], ["tests_failed", 14], ["created_at", "2018-05-25 14:51:45.222555"], ["updated_at", "2018-05-25 14:51:45.222555"], ["build_date", "2018-05-18T07:19:17+02:00"], ["build_timestamp", 1526620757300]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2777], ["tests_failed", 0], ["created_at", "2018-05-25 14:51:45.994236"], ["updated_at", "2018-05-25 14:51:45.994236"], ["build_date", "2018-05-18T03:19:17+02:00"], ["build_timestamp", 1526606357050]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
