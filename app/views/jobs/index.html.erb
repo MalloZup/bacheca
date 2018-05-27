@@ -1,67 +1,44 @@
 <h1>Dashboard for jenkins junit jobs</h1>
 <p>Currently under development</p>
-<div id="chart" style="width: auto; height: 900px;"></div>
+<div id="chart" style="width: auto; height: 1000px;"></div>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <%= javascript_tag do -%>
-google.charts.load('current', {packages: ['corechart', 'line']});
-google.charts.setOnLoadCallback(drawLogScales);
 
-function drawLogScales() {
-      var data = new google.visualization.DataTable();
-      var unames = <%=  raw @jobs_uniq_name.to_json %>
-      // the first column is X.
-      data.addColumn('number', 'X');
-      for (var i = 0; i < unames.length; i++) {
-         data.addColumn('number', unames[i]['name']);
-      }  
-      // TODO: create an hash for names and order the array by datetime.
-     
-      data.addRows([
-        [0, 0, 0],    [1, 10, 5],   [2, 23, 15],  [3, 17, 9],   [4, 18, 10],  [5, 9, 5],
-        [6, 11, 3],   [7, 27, 19],  [8, 33, 25],  [9, 40, 32],  [10, 32, 24], [11, 35, 27],
-        [12, 30, 22], [13, 40, 32], [14, 42, 34], [15, 47, 39], [16, 44, 36], [17, 48, 40],
-        [18, 52, 44], [19, 54, 46], [20, 42, 34], [21, 55, 47], [22, 56, 48], [23, 57, 49],
-        [24, 60, 52], [25, 50, 42], [26, 52, 44], [27, 51, 43], [28, 49, 41], [29, 53, 45],
-        [30, 55, 47], [31, 60, 52], [32, 61, 53], [33, 59, 51], [34, 62, 54], [35, 65, 57],
-        [36, 62, 54], [37, 58, 50], [38, 55, 47], [39, 61, 53], [40, 64, 56], [41, 65, 57],
-        [42, 63, 55], [43, 66, 58], [44, 67, 59], [45, 69, 61], [46, 69, 61], [47, 70, 62],
-        [48, 72, 64], [49, 68, 60], [50, 66, 58], [51, 65, 57], [52, 67, 59], [53, 70, 62],
-        [54, 71, 63], [55, 72, 64], [56, 73, 65], [57, 75, 67], [58, 70, 62], [59, 68, 60],
-        [60, 64, 56], [61, 60, 52], [62, 65, 57], [63, 67, 59], [64, 68, 60], [65, 69, 61],
-        [66, 70, 62], [67, 72, 64], [68, 75, 67], [69, 80, 72]
-      ]);
 
-      var options = {
-       hAxis: {
-          title: 'history',
-          textStyle: {
-            color: '#1a234e',
-            fontSize: 30,
-            bold: true
-          },
-          titleTextStyle: {
-            color: '#1a234e',
-            fontSize: 30,
-            bold: true
-          }
-        },
-         vAxis: {
-          title: 'failures',
-          textStyle: {
-            color: '#1a237e',
-            fontSize: 30,
-            bold: true
-          },
-          titleTextStyle: {
-            color: '#1a237e',
-            fontSize: 30,
-            bold: true
-          }
-        },
-        colors: ['#a52714', '#097138']
-      };
+google.charts.load('current', {'packages': ['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 
-      var chart = new google.visualization.LineChart(document.getElementById('chart'));
-      chart.draw(data, options);
-    }
+function drawChart() {
+    var data1 = new google.visualization.DataTable();
+    var data2 = new google.visualization.DataTable();
+    var unames = <%=  raw @jobs_uniq_name.to_json %>
+    var results = <%=  raw @ordered_tests_result_by_jobname.to_json %>
+
+ 
+    data1.addColumn('number', 'timestamp');
+    data2.addColumn('number', 'timestamp');
+    data1.addColumn('number', unames[0]['name']);
+    data2.addColumn('number', unames[1]['name']);
+    data1.addRows([
+      [1, 500],
+      [8, 950],
+      [11, 1000]
+    ]);
+    
+    // build-tim, tests-results
+    data2.addRows([
+      [23, 800],
+      [4, 600],
+      [5, 300],
+      [300, 500]
+    ]);
+    
+    var joinedData = google.visualization.data.join(data1, data2, 'full', [[0, 0]], [1], [1]);
+    
+    var chart = new google.visualization.LineChart(document.querySelector('#chart'));
+    chart.draw(joinedData, {
+        interpolateNulls: true
+    });
+}
+
 <% end -%>
