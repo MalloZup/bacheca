@@ -1488,3 +1488,1122 @@ Migrating to AddBuildTimestampToJobs (20180525144746)
   ↳ db/seeds.rb:44
   [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
   ↳ db/seeds.rb:44
+Started GET "/" for 127.0.0.1 at 2018-05-26 10:46:31 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:10
+  Rendered jobs/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 203ms (Views: 194.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 10:50:17 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 199ms (Views: 171.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 10:50:37 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 37.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 10:53:14 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:18:50 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT name, build_timestamp, build_date FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 54ms (Views: 29.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:19:20 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT name, build_timestamp, build_date FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.4ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:19:36 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT name, build_timestamp, build_date FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 11.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:19:44 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  name, build_timestamp, build_date FROM "jobs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:5
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 12.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:28:02 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  name, build_timestamp, build_date FROM "jobs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  name, build_timestamp, build_date FROM "jobs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 41ms (Views: 28.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateJobs (20180524105149)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180524105149_create_jobs.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "build" integer, "tests_failed" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180524105149_create_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180524105149"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuildDateToJobs (20180525143436)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "jobs" ADD "build_date" varchar[0m
+  ↳ db/migrate/20180525143436_add_build_date_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525143436"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddBuildTimestampToJobs (20180525144746)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "jobs" ADD "build_timestamp" bigint[0m
+  ↳ db/migrate/20180525144746_add_build_timestamp_to_jobs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180525144746"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-26 09:29:21.237586"], ["updated_at", "2018-05-26 09:29:21.237586"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3592], ["tests_failed", 1], ["created_at", "2018-05-26 09:32:32.743906"], ["updated_at", "2018-05-26 09:32:32.743906"], ["build_date", "2018-05-26T08:53:17+02:00"], ["build_timestamp", 1527317597283]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3591], ["tests_failed", 1], ["created_at", "2018-05-26 09:32:33.482560"], ["updated_at", "2018-05-26 09:32:33.482560"], ["build_date", "2018-05-26T05:53:17+02:00"], ["build_timestamp", 1527306797088]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3590], ["tests_failed", 1], ["created_at", "2018-05-26 09:32:34.252269"], ["updated_at", "2018-05-26 09:32:34.252269"], ["build_date", "2018-05-26T02:53:17+02:00"], ["build_timestamp", 1527295997247]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3589], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:35.043740"], ["updated_at", "2018-05-26 09:32:35.043740"], ["build_date", "2018-05-25T23:53:17+02:00"], ["build_timestamp", 1527285197092]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3588], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:36.062350"], ["updated_at", "2018-05-26 09:32:36.062350"], ["build_date", "2018-05-25T20:53:17+02:00"], ["build_timestamp", 1527274397411]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3587], ["tests_failed", 1], ["created_at", "2018-05-26 09:32:36.931250"], ["updated_at", "2018-05-26 09:32:36.931250"], ["build_date", "2018-05-25T17:53:17+02:00"], ["build_timestamp", 1527263597224]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3586], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:37.739982"], ["updated_at", "2018-05-26 09:32:37.739982"], ["build_date", "2018-05-25T14:53:17+02:00"], ["build_timestamp", 1527252797100]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3585], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:38.816093"], ["updated_at", "2018-05-26 09:32:38.816093"], ["build_date", "2018-05-25T11:53:17+02:00"], ["build_timestamp", 1527241997374]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3584], ["tests_failed", 1], ["created_at", "2018-05-26 09:32:39.791228"], ["updated_at", "2018-05-26 09:32:39.791228"], ["build_date", "2018-05-25T08:53:17+02:00"], ["build_timestamp", 1527231197309]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3583], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:40.966540"], ["updated_at", "2018-05-26 09:32:40.966540"], ["build_date", "2018-05-25T05:53:17+02:00"], ["build_timestamp", 1527220397165]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3582], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:42.149751"], ["updated_at", "2018-05-26 09:32:42.149751"], ["build_date", "2018-05-25T02:53:17+02:00"], ["build_timestamp", 1527209597100]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3581], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:43.132345"], ["updated_at", "2018-05-26 09:32:43.132345"], ["build_date", "2018-05-24T23:53:17+02:00"], ["build_timestamp", 1527198797154]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3580], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:44.310436"], ["updated_at", "2018-05-26 09:32:44.310436"], ["build_date", "2018-05-24T20:53:17+02:00"], ["build_timestamp", 1527187997270]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3579], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:45.300250"], ["updated_at", "2018-05-26 09:32:45.300250"], ["build_date", "2018-05-24T17:53:17+02:00"], ["build_timestamp", 1527177197564]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3578], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:46.101781"], ["updated_at", "2018-05-26 09:32:46.101781"], ["build_date", "2018-05-24T14:53:17+02:00"], ["build_timestamp", 1527166397330]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3577], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:46.867800"], ["updated_at", "2018-05-26 09:32:46.867800"], ["build_date", "2018-05-24T11:53:18+02:00"], ["build_timestamp", 1527155598167]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3576], ["tests_failed", 3], ["created_at", "2018-05-26 09:32:47.868710"], ["updated_at", "2018-05-26 09:32:47.868710"], ["build_date", "2018-05-24T08:53:18+02:00"], ["build_timestamp", 1527144798738]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3573], ["tests_failed", 63], ["created_at", "2018-05-26 09:32:49.558933"], ["updated_at", "2018-05-26 09:32:49.558933"], ["build_date", "2018-05-23T23:53:17+02:00"], ["build_timestamp", 1527112397066]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3572], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:50.610518"], ["updated_at", "2018-05-26 09:32:50.610518"], ["build_date", "2018-05-23T20:53:17+02:00"], ["build_timestamp", 1527101597560]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3571], ["tests_failed", 0], ["created_at", "2018-05-26 09:32:51.392185"], ["updated_at", "2018-05-26 09:32:51.392185"], ["build_date", "2018-05-23T17:53:17+02:00"], ["build_timestamp", 1527090797125]]
+  ↳ db/seeds.rb:44
+  [1m[35m (18.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3570], ["tests_failed", 0], ["created_at", "2018-05-26 09:33:53.251188"], ["updated_at", "2018-05-26 09:33:53.251188"], ["build_date", "2018-05-23T14:53:17+02:00"], ["build_timestamp", 1527079997087]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3569], ["tests_failed", 1], ["created_at", "2018-05-26 09:33:54.531374"], ["updated_at", "2018-05-26 09:33:54.531374"], ["build_date", "2018-05-23T11:53:17+02:00"], ["build_timestamp", 1527069197415]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3568], ["tests_failed", 0], ["created_at", "2018-05-26 09:33:55.285907"], ["updated_at", "2018-05-26 09:33:55.285907"], ["build_date", "2018-05-23T08:53:17+02:00"], ["build_timestamp", 1527058397681]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3567], ["tests_failed", 1], ["created_at", "2018-05-26 09:33:56.086305"], ["updated_at", "2018-05-26 09:33:56.086305"], ["build_date", "2018-05-23T05:53:17+02:00"], ["build_timestamp", 1527047597173]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3566], ["tests_failed", 0], ["created_at", "2018-05-26 09:33:56.926752"], ["updated_at", "2018-05-26 09:33:56.926752"], ["build_date", "2018-05-23T02:53:17+02:00"], ["build_timestamp", 1527036797270]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3565], ["tests_failed", 0], ["created_at", "2018-05-26 09:33:57.722680"], ["updated_at", "2018-05-26 09:33:57.722680"], ["build_date", "2018-05-22T23:53:17+02:00"], ["build_timestamp", 1527025997183]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3564], ["tests_failed", 0], ["created_at", "2018-05-26 09:33:58.852571"], ["updated_at", "2018-05-26 09:33:58.852571"], ["build_date", "2018-05-22T20:53:19+02:00"], ["build_timestamp", 1527015199964]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3563], ["tests_failed", 1], ["created_at", "2018-05-26 09:33:59.816158"], ["updated_at", "2018-05-26 09:33:59.816158"], ["build_date", "2018-05-22T17:53:17+02:00"], ["build_timestamp", 1527004397074]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3562], ["tests_failed", 1], ["created_at", "2018-05-26 09:34:00.601791"], ["updated_at", "2018-05-26 09:34:00.601791"], ["build_date", "2018-05-22T14:53:17+02:00"], ["build_timestamp", 1526993597164]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3561], ["tests_failed", 1], ["created_at", "2018-05-26 09:34:01.662529"], ["updated_at", "2018-05-26 09:34:01.662529"], ["build_date", "2018-05-22T11:53:17+02:00"], ["build_timestamp", 1526982797340]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3560], ["tests_failed", 2], ["created_at", "2018-05-26 09:34:02.953352"], ["updated_at", "2018-05-26 09:34:02.953352"], ["build_date", "2018-05-22T08:53:17+02:00"], ["build_timestamp", 1526971997230]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3559], ["tests_failed", 0], ["created_at", "2018-05-26 09:34:03.815893"], ["updated_at", "2018-05-26 09:34:03.815893"], ["build_date", "2018-05-22T05:53:17+02:00"], ["build_timestamp", 1526961197397]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3558], ["tests_failed", 0], ["created_at", "2018-05-26 09:34:04.719362"], ["updated_at", "2018-05-26 09:34:04.719362"], ["build_date", "2018-05-22T02:53:17+02:00"], ["build_timestamp", 1526950397165]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3557], ["tests_failed", 0], ["created_at", "2018-05-26 09:34:05.729601"], ["updated_at", "2018-05-26 09:34:05.729601"], ["build_date", "2018-05-21T23:53:17+02:00"], ["build_timestamp", 1526939597235]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3556], ["tests_failed", 0], ["created_at", "2018-05-26 09:34:06.859914"], ["updated_at", "2018-05-26 09:34:06.859914"], ["build_date", "2018-05-21T20:53:17+02:00"], ["build_timestamp", 1526928797457]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3555], ["tests_failed", 1], ["created_at", "2018-05-26 09:34:07.911641"], ["updated_at", "2018-05-26 09:34:07.911641"], ["build_date", "2018-05-21T17:53:17+02:00"], ["build_timestamp", 1526917997191]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3554], ["tests_failed", 0], ["created_at", "2018-05-26 09:34:08.671375"], ["updated_at", "2018-05-26 09:34:08.671375"], ["build_date", "2018-05-21T14:53:17+02:00"], ["build_timestamp", 1526907197091]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3553], ["tests_failed", 0], ["created_at", "2018-05-26 09:34:09.461028"], ["updated_at", "2018-05-26 09:34:09.461028"], ["build_date", "2018-05-21T11:53:17+02:00"], ["build_timestamp", 1526896397088]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3552], ["tests_failed", 0], ["created_at", "2018-05-26 09:34:10.432301"], ["updated_at", "2018-05-26 09:34:10.432301"], ["build_date", "2018-05-21T08:53:17+02:00"], ["build_timestamp", 1526885597781]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3551], ["tests_failed", 0], ["created_at", "2018-05-26 09:34:11.648128"], ["updated_at", "2018-05-26 09:34:11.648128"], ["build_date", "2018-05-21T05:53:17+02:00"], ["build_timestamp", 1526874797393]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3550], ["tests_failed", 2], ["created_at", "2018-05-26 09:34:12.783874"], ["updated_at", "2018-05-26 09:34:12.783874"], ["build_date", "2018-05-21T02:53:17+02:00"], ["build_timestamp", 1526863997634]]
+  ↳ db/seeds.rb:44
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (2.0ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.0-cucumber"], ["build", 3548], ["tests_failed", 2], ["created_at", "2018-05-26 09:34:13.978082"], ["updated_at", "2018-05-26 09:34:13.978082"], ["build_date", "2018-05-20T20:53:17+02:00"], ["build_timestamp", 1526842397452]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2826], ["tests_failed", 1], ["created_at", "2018-05-26 09:34:16.552782"], ["updated_at", "2018-05-26 09:34:16.552782"], ["build_date", "2018-05-26T07:19:17+02:00"], ["build_timestamp", 1527311957286]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2825], ["tests_failed", 1], ["created_at", "2018-05-26 09:34:17.513808"], ["updated_at", "2018-05-26 09:34:17.513808"], ["build_date", "2018-05-26T03:19:17+02:00"], ["build_timestamp", 1527297557127]]
+  ↳ db/seeds.rb:44
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mJob Create (1.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "build", "tests_failed", "created_at", "updated_at", "build_date", "build_timestamp") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "manager-3.1-cucumber"], ["build", 2824], ["tests_failed", 15], ["created_at", "2018-05-26 09:34:18.668346"], ["updated_at", "2018-05-26 09:34:18.668346"], ["build_date", "2018-05-25T23:19:17+02:00"], ["build_timestamp", 1527283157568]]
+  ↳ db/seeds.rb:44
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:34:58 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: manager: SELECT  "jobs".* FROM "jobs" WHERE (name = manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:35:00 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: manager: SELECT  "jobs".* FROM "jobs" WHERE (name = manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:35:58 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name == manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: manager: SELECT  "jobs".* FROM "jobs" WHERE (name == manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:36:09 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name == manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: manager: SELECT  "jobs".* FROM "jobs" WHERE (name == manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:36:13 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name == manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: manager: SELECT  "jobs".* FROM "jobs" WHERE (name == manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:38:01 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name LIKE manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: manager: SELECT  "jobs".* FROM "jobs" WHERE (name LIKE manager-3.0-cucumber) ORDER BY "jobs"."build_timestamp" ASC LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:38:41 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name LIKE manager-3.0-cucumber) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: manager: SELECT  "jobs".* FROM "jobs" WHERE (name LIKE manager-3.0-cucumber) LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:38:55 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name LIKE manager-3.0-cucumber) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: manager: SELECT  "jobs".* FROM "jobs" WHERE (name LIKE manager-3.0-cucumber) LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:40:28 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name: manager-3.0-cucumber) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: unrecognized token: ":": SELECT  "jobs".* FROM "jobs" WHERE (name: manager-3.0-cucumber) LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:40:42 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name: manager-3.0-cucumber) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: unrecognized token: ":": SELECT  "jobs".* FROM "jobs" WHERE (name: manager-3.0-cucumber) LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:41:39 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 151ms (Views: 137.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 11:42:21 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 205ms (Views: 171.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:08:26 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 232ms (Views: 202.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:08:31 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:12:01 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `call' for #<Array:0x007f590c1122b0>
+Did you mean?  caller):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `each'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:14:04 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 133ms (Views: 129.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:14:16 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:14:18 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:14:23 +0200
+Processing by JobsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:15:20 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:10
+  Rendered jobs/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 203ms (Views: 187.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:20:26 +0200
+  
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:20:36 +0200
+SyntaxError (compile error):
+  
+compile error
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:100:in `load'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:100:in `load'
+activesupport (5.2.0) lib/active_support/dependencies.rb:468:in `block in load_file'
+activesupport (5.2.0) lib/active_support/dependencies.rb:653:in `new_constants_in'
+activesupport (5.2.0) lib/active_support/dependencies.rb:467:in `load_file'
+activesupport (5.2.0) lib/active_support/dependencies.rb:365:in `block in require_or_load'
+activesupport (5.2.0) lib/active_support/dependencies.rb:37:in `block in load_interlock'
+activesupport (5.2.0) lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+activesupport (5.2.0) lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+activesupport (5.2.0) lib/active_support/dependencies/interlock.rb:13:in `loading'
+activesupport (5.2.0) lib/active_support/dependencies.rb:37:in `load_interlock'
+activesupport (5.2.0) lib/active_support/dependencies.rb:348:in `require_or_load'
+activesupport (5.2.0) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+LoadError (Unable to autoload constant JobsController, expected /home/dmaiocchi/bin/bacheca/app/controllers/jobs_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:23:59 +0200
+  
+SyntaxError (compile error):
+  
+compile error
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:100:in `load'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:100:in `load'
+activesupport (5.2.0) lib/active_support/dependencies.rb:468:in `block in load_file'
+activesupport (5.2.0) lib/active_support/dependencies.rb:653:in `new_constants_in'
+activesupport (5.2.0) lib/active_support/dependencies.rb:467:in `load_file'
+activesupport (5.2.0) lib/active_support/dependencies.rb:365:in `block in require_or_load'
+activesupport (5.2.0) lib/active_support/dependencies.rb:37:in `block in load_interlock'
+activesupport (5.2.0) lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+activesupport (5.2.0) lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+activesupport (5.2.0) lib/active_support/dependencies/interlock.rb:13:in `loading'
+activesupport (5.2.0) lib/active_support/dependencies.rb:37:in `load_interlock'
+activesupport (5.2.0) lib/active_support/dependencies.rb:348:in `require_or_load'
+activesupport (5.2.0) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:27:47 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (:name = NULL) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::MismatchException: datatype mismatch: SELECT  "jobs".* FROM "jobs" WHERE (:name = NULL) LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:29:16 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (:name = NULL) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::MismatchException: datatype mismatch: SELECT  "jobs".* FROM "jobs" WHERE (:name = NULL) LIMIT ?):
+  
+app/controllers/jobs_controller.rb:6:in `block in index'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:30:42 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (:name = '#<Job:0x007f81966adb68>') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:7
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::MismatchException: datatype mismatch: SELECT  "jobs".* FROM "jobs" WHERE (:name = '#<Job:0x007f81966adb68>') LIMIT ?):
+  
+app/controllers/jobs_controller.rb:7:in `block in index'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:31:08 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (:name = 'manager-3.0-cucumber') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:7
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::MismatchException: datatype mismatch: SELECT  "jobs".* FROM "jobs" WHERE (:name = 'manager-3.0-cucumber') LIMIT ?):
+  
+app/controllers/jobs_controller.rb:7:in `block in index'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:31:14 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (:name = 'manager-3.0-cucumber') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:7
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::MismatchException: datatype mismatch: SELECT  "jobs".* FROM "jobs" WHERE (:name = 'manager-3.0-cucumber') LIMIT ?):
+  
+app/controllers/jobs_controller.rb:7:in `block in index'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:31:26 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 12.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:31:49 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (:name = 'manager-3.0-cucumber') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:7
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::MismatchException: datatype mismatch: SELECT  "jobs".* FROM "jobs" WHERE (:name = 'manager-3.0-cucumber') LIMIT ?):
+  
+app/controllers/jobs_controller.rb:7:in `block in index'
+app/controllers/jobs_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:32:47 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.0-cucumber') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:7
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.1-cucumber') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:7
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:37:51 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 13.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:38:06 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:5
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 191ms (Views: 162.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:48:30 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 199ms (Views: 169.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:48:44 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:48:53 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 14.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:49:35 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 27.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:50:25 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 32.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-27 16:50:31 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 18.5ms | ActiveRecord: 1.0ms)
+
+
