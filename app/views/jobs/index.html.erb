@@ -4,7 +4,6 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <%= javascript_tag do -%>
 
-
 google.charts.load('current', {'packages': ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
@@ -12,7 +11,6 @@ var unames = <%=  raw @jobs_uniq_name.to_json %>
 var results = <%=  raw @ordered_tests_result_by_jobname.to_json %>
 var data = [];
 function drawChart() {
-
     for (var i = 0; i < unames.length; i++) {
        data[i] =  new google.visualization.DataTable();
     }
@@ -25,7 +23,6 @@ function drawChart() {
      for (var i = 0; i < unames.length; i++) {
       var job_name = unames[i]['name'];
     // iterate over test_results and build_timestamp
-
       for (var j = 0; j < results[job_name].length; j++) {
         var rows = [];
         rows.push( [ results[job_name][j][0], results[job_name][j][1] ])
@@ -35,11 +32,9 @@ function drawChart() {
     var joinedData = [];
     var previous = 0;
 
-
     for (var i = 0; i < unames.length; i++) {
-      if (i > 1) {
-        previous = i - 1
-      }
+      if (i > 1)  previous = i - 1;
+
       if (i == 0) {
         joinedData[0] = google.visualization.data.join(data[0], data[1], 'full', [[0, 0]], [1], [1]);
         continue;
@@ -48,41 +43,8 @@ function drawChart() {
       joinedData[i] = google.visualization.data.join(joinedData[previous], data[i], 'full', [[0, 0]], [1,2], [1]);
     }
     var chart = new google.visualization.LineChart(document.querySelector('#chart'));
-    chart.draw(joinedData[unames.length - 1],  {
-        interpolateNulls: true,
-        hAxis: {
-          title: 'Timestamp',
-          textStyle: {
-            color: '#01579b',
-            fontSize: 24,
-            fontName: 'Arial',
-            bold: true,
-            italic: true
-          },
-          titleTextStyle: {
-            color: '#01579b',
-            fontSize: 24,
-            fontName: 'Arial',
-            bold: true,
-            italic: true
-          }
-        },
-        vAxis: {
-          title: 'tests failures',
-          textStyle: {
-            color: '#1a237e',
-            fontSize: 24,
-            bold: true
-          },
-          titleTextStyle: {
-            color: '#1a237e',
-            fontSize: 24,
-            bold: true
-          }
-        },
-        colors: ['#a52714', '#097138']
 
-    });
+    chart.draw(joinedData[unames.length - 1], linechart_options);
 }
 
 <% end -%>
