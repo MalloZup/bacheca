@@ -1,6 +1,6 @@
 # Bacheca
 
-![bacheca](public/demo.jpg)
+![bacheca](public/demo.png)
 
 
 ## Setup
