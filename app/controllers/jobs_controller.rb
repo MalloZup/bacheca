@@ -2,6 +2,7 @@ class JobsController < ApplicationController
   def index
     @jobs = Job.all
     @jobs_uniq_name = Job.select(:name).distinct
+    puts @jobs_uniq_name
     @ordered_tests_result_by_jobname = Hash.new
     @jobs_uniq_name.each do |job|
       job_name = job['name']

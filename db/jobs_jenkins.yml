@@ -1,2 +1,2 @@
 ---
-jenkins_jobs: ["manager-3.1-cucumber", "manager-3.0-cucumber"]
+jenkins_jobs: ["manager-3.1-cucumber", "manager-3.0-cucumber", "manager-Head-cucumber"]

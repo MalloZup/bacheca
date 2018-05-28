@@ -1,5 +1,5 @@
-<h1>Dashboard for jenkins junit jobs</h1>
-<p>Currently under development</p>
+<h1><center>Dashboard for jenkins job results</center></h1>
+<p><center> tests results are ordered chronologically </center></p>
 <div id="chart" style="width: auto; height: 1000px;"></div>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <%= javascript_tag do -%>
@@ -12,26 +12,42 @@ var unames = <%=  raw @jobs_uniq_name.to_json %>
 var results = <%=  raw @ordered_tests_result_by_jobname.to_json %>
 var data = [];
 function drawChart() {
+
     for (var i = 0; i < unames.length; i++) {
        data[i] =  new google.visualization.DataTable();
     }
 
-    for (var i = 0; i < unames.length; i++) {
-      data[i].addColumn('number', 'timestamp');
-      data[i].addColumn('number', unames[i]['name']);
+    for (var k = 0; k < unames.length; k++) {
+      data[k].addColumn('number', 'timestamp');
+      data[k].addColumn('number', unames[k]['name']);
     }
-    for (var i = 0; i < unames.length; i++) {
-      var job_name = unames[i]['name']
-      // fixme iterate over this
-      var build_timestamp = results[job_name][0]
-      var tests_failed = results[job_name][1]
-      alert(build_timestamp)
-      data[i].addRows(build_timestamp, tests_failed)
-    }
+     // list of jobs
+     for (var i = 0; i < unames.length; i++) {
+      var job_name = unames[i]['name'];
+    // iterate over test_results and build_timestamp
 
-    var joinedData = google.visualization.data.join(data[0], data[1], 'full', [[0, 0]], [1], [1]);
+      for (var j = 0; j < results[job_name].length; j++) {
+        var rows = [];
+        rows.push( [ results[job_name][j][0], results[job_name][j][1] ])
+        data[i].addRows(rows)
+      }
+    }
+    var joinedData = [];
+    var previous = 0;
+    for (var i = 0; i < unames.length; i++) {
+      if (i > 1) {
+        previous = i - 1
+      }
+      if (i == 0) {
+        joinedData[0] = google.visualization.data.join(data[0], data[1], 'full', [[0, 0]], [1], [1]);
+        continue;
+      }
+      alert(i);
+      alert(previous);
+      joinedData[i] = google.visualization.data.join(joinedData[previous], data[i], 'full', [[0, 0]], [1,2], [1]);
+    }
     var chart = new google.visualization.LineChart(document.querySelector('#chart'));
-    chart.draw(joinedData, {
+    chart.draw(joinedData[2], {
         interpolateNulls: true
     });
 }
