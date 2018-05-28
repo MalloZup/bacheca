@@ -2,8 +2,16 @@
 
 ![bacheca](public/demo.png)
 
+Bacheca will help to analyze in deep tests.
+At moment is under development, feel free to contribute at any time.
 
-## Setup
+## Setup for devel version ( only avaible currently)
+
+0) you need to have installed rails.
+
+```ruby
+gem install rails
+```
 
 1) Configuration
 Add the jenkins credentials you will need to setup
@@ -13,6 +21,7 @@ touch db/login_jenkins.yml
 ```
 here is how it should like the login_jenkins.yml
 
+As password you can use a jenkins token.
 ```yml
 server_url: '0.0.0.0'
 username: 'somename', 
@@ -23,9 +32,17 @@ the jobs_jenkins.yml should contain a list of jobs.
 ```yml
 jenkins_jobs: ["manager-3.1-cucumber", "manager-3.0-cucumber"]
 ```
+Ensure that your jenkins user has access to the jobs
 
-2) Feed database
-WIP
+2) Feed and create database schemas with
 
-3) Visualize it
-WIP
+```ruby
+rake db:migrate
+rake db:seed
+```
+
+3) run it!
+```ruby
+cd bacheca
+rails server
+```
