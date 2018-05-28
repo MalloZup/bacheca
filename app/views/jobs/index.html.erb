@@ -34,6 +34,8 @@ function drawChart() {
     }
     var joinedData = [];
     var previous = 0;
+
+
     for (var i = 0; i < unames.length; i++) {
       if (i > 1) {
         previous = i - 1
@@ -42,13 +44,44 @@ function drawChart() {
         joinedData[0] = google.visualization.data.join(data[0], data[1], 'full', [[0, 0]], [1], [1]);
         continue;
       }
-      alert(i);
-      alert(previous);
+
       joinedData[i] = google.visualization.data.join(joinedData[previous], data[i], 'full', [[0, 0]], [1,2], [1]);
     }
     var chart = new google.visualization.LineChart(document.querySelector('#chart'));
-    chart.draw(joinedData[2], {
-        interpolateNulls: true
+    chart.draw(joinedData[unames.length - 1],  {
+        interpolateNulls: true,
+        hAxis: {
+          title: 'Timestamp',
+          textStyle: {
+            color: '#01579b',
+            fontSize: 24,
+            fontName: 'Arial',
+            bold: true,
+            italic: true
+          },
+          titleTextStyle: {
+            color: '#01579b',
+            fontSize: 24,
+            fontName: 'Arial',
+            bold: true,
+            italic: true
+          }
+        },
+        vAxis: {
+          title: 'tests failures',
+          textStyle: {
+            color: '#1a237e',
+            fontSize: 24,
+            bold: true
+          },
+          titleTextStyle: {
+            color: '#1a237e',
+            fontSize: 24,
+            bold: true
+          }
+        },
+        colors: ['#a52714', '#097138']
+
     });
 }
 

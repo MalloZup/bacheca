@@ -1,5 +1,8 @@
 # Bacheca
 
+![bacheca](public/demo.jpg)
+
+
 ## Setup
 
 1) Configuration
