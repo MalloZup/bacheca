@@ -5,6 +5,9 @@
 Bacheca will help to analyze in deep tests.
 At moment is under development, feel free to contribute at any time.
 
+Feel free to take a look on milestones to see what is planed https://github.com/MalloZup/bacheca/milestones
+
+
 ## Setup for devel version ( only avaible currently)
 
 0) you need to have installed rails.
