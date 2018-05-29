@@ -65,9 +65,14 @@ function get_jenkins_data(job_name) {
 	var all_data = [];
 	for (var j = 0; j < results[job_name].length; j++)
     {
+		// TODO: replace with hash
+		// 0: build_timestamp, 1 results_tests, 2 datetime
 			var jdata = {};
-      jdata['x'] = results[job_name][j][0]
+      jdata['t'] = results[job_name][j][2]
     	jdata['y'] = results[job_name][j][1]
+			// 2018-05-23T02:53:17+02:00
+			// 2018-05-23T02:53:17
+		  alert(jdata['y'] = results[job_name][j][2])
       all_data.push(jdata);
 		}
 	//	alert(JSON.stringify(results));

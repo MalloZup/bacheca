@@ -27,7 +27,7 @@ module JenkinsClient
   end
 
   def self.timestamp_and_build_date(build_details)
-     [ build_details['timestamp'], Time.at(build_details['timestamp'] / 1000 ).to_datetime ]
+     [ build_details['timestamp'], Time.at(build_details['timestamp'] / 1000 ).to_datetime.to_s.split('+') [0] ]
   end
 
   def self.save_data(filtered_jobs)
@@ -41,7 +41,8 @@ module JenkinsClient
           json_resp = @client.api_get_request("/job/#{job_name}/#{build['number']}/testReport/")
           tests_failed = json_resp['failCount']
           build_timestamp, build_date = timestamp_and_build_date(@client.job.get_build_details(job_name, build['number']))
-          Job.create(name: job_name.to_s, build: build['number'].to_i, tests_failed: tests_failed.to_i, build_date: build_date, build_timestamp: build_timestamp)
+          puts build_date 
+  #        Job.create(name: job_name.to_s, build: build['number'].to_i, tests_failed: tests_failed.to_i, build_date: build_date, build_timestamp: build_timestamp)
         rescue JenkinsApi::Exceptions::NotFound
           puts 'testReport not found. skipping'
         end
