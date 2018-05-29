@@ -22,7 +22,7 @@ Add the jenkins credentials you will need to setup
 ```bash
 touch db/login_jenkins.yml
 ```
-here is how it should like the login_jenkins.yml
+here is how it should like the `login_jenkins.yml`
 
 As password you can use a jenkins token.
 ```yml
@@ -31,7 +31,7 @@ username: 'somename',
 password: 'secret password'
 ```
 
-the jobs_jenkins.yml should contain a list of jobs.
+the `jobs_jenkins.yml` should contain a list of jobs.
 ```yml
 jenkins_jobs: ["manager-3.1-cucumber", "manager-3.0-cucumber"]
 ```
