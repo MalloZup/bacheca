@@ -41,8 +41,7 @@ module JenkinsClient
           json_resp = @client.api_get_request("/job/#{job_name}/#{build['number']}/testReport/")
           tests_failed = json_resp['failCount']
           build_timestamp, build_date = timestamp_and_build_date(@client.job.get_build_details(job_name, build['number']))
-          puts build_date 
-  #        Job.create(name: job_name.to_s, build: build['number'].to_i, tests_failed: tests_failed.to_i, build_date: build_date, build_timestamp: build_timestamp)
+          Job.create(name: job_name.to_s, build: build['number'].to_i, tests_failed: tests_failed.to_i, build_date: build_date, build_timestamp: build_timestamp)
         rescue JenkinsApi::Exceptions::NotFound
           puts 'testReport not found. skipping'
         end

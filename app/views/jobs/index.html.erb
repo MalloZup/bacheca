@@ -46,10 +46,11 @@ var linechart = new Chart(ctx, {
 				   	}
 				}],
             xAxes: [{
-                type: 'linear',
+							type: 'time',
+							distribution: 'series',
 								scaleLabel: {
 								display: true,
-								labelString: 'history timestamp',
+								labelString: 'history to_datetime',
 								fontSize: 35
 							},
                 position: 'bottom',
@@ -68,12 +69,9 @@ function get_jenkins_data(job_name) {
 		// TODO: replace with hash
 		// 0: build_timestamp, 1 results_tests, 2 datetime
 			var jdata = {};
-      jdata['t'] = results[job_name][j][2]
-    	jdata['y'] = results[job_name][j][1]
-			// 2018-05-23T02:53:17+02:00
-			// 2018-05-23T02:53:17
-		  alert(jdata['y'] = results[job_name][j][2])
-      all_data.push(jdata);
+      jdata['x'] = results[job_name][j][2];
+    	jdata['y'] = results[job_name][j][1];
+		  all_data.push(jdata);
 		}
 	//	alert(JSON.stringify(results));
 	//	alert(JSON.stringify(all_data));

@@ -2,6 +2,9 @@
 
 ![bacheca](public/demo.png)
 
+Or analyze only specific tests !
+![bacheca1](public/demo2.png)
+
 Bacheca will help to analyze in deep tests.
 At moment is under development, feel free to contribute at any time.
 
