@@ -2,7 +2,7 @@
 
 ![bacheca](public/demo.png)
 
-Or analyze only specific tests !
+##### You can also select only specific jobs and axes will scale depending on data.
 ![bacheca1](public/demo2.png)
 
 Bacheca will help to analyze in deep tests.
