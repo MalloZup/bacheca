@@ -1,50 +1,79 @@
 <h1><center>Dashboard for jenkins job results</center></h1>
 <p><center> tests results are ordered chronologically </center></p>
-<div id="chart" style="width: auto; height: 1000px;"></div>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<%= javascript_tag do -%>
+<div style="width:85%;">
+		<canvas id="canvas"></canvas>
+</div>
 
-google.charts.load('current', {'packages': ['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+<%= javascript_tag do %>
 
 var unames = <%=  raw @jobs_uniq_name.to_json %>
 var results = <%=  raw @ordered_tests_result_by_jobname.to_json %>
-var data = [];
-function drawChart() {
-    for (var i = 0; i < unames.length; i++) {
-       data[i] =  new google.visualization.DataTable();
-    }
+var all_jenk_jobs = [];
+var ctx = document.getElementById("canvas");
 
-    for (var k = 0; k < unames.length; k++) {
-      data[k].addColumn('number', 'timestamp');
-      data[k].addColumn('number', unames[k]['name']);
-    }
-     // list of jobs
-     for (var i = 0; i < unames.length; i++) {
-      var job_name = unames[i]['name'];
-    // iterate over test_results and build_timestamp
-      for (var j = 0; j < results[job_name].length; j++) {
-        var rows = [];
-        rows.push( [ results[job_name][j][0], results[job_name][j][1] ])
-        data[i].addRows(rows)
-      }
-    }
-    var joinedData = [];
-    var previous = 0;
 
-    for (var i = 0; i < unames.length; i++) {
-      if (i > 1)  previous = i - 1;
-
-      if (i == 0) {
-        joinedData[0] = google.visualization.data.join(data[0], data[1], 'full', [[0, 0]], [1], [1]);
-        continue;
-      }
-
-      joinedData[i] = google.visualization.data.join(joinedData[previous], data[i], 'full', [[0, 0]], [1,2], [1]);
-    }
-    var chart = new google.visualization.LineChart(document.querySelector('#chart'));
-
-    chart.draw(joinedData[unames.length - 1], linechart_options);
+for (var k = 0; k < unames.length; k++) {
+ var job = {};
+ job['label'] = unames[k]['name'];
+ job['fill'] = true;
+ job['data'] = get_jenkins_data(unames[k]['name']);
+ job['backgroundColor'] = getRandomColor();
+ job['borderColor'] = getRandomColor();
+ all_jenk_jobs.push(job);
 }
+
+var linechart = new Chart(ctx, {
+    type: 'line',
+    data: { datasets: all_jenk_jobs
+		},
+    options: {
+			legend: {
+				position: 'right',
+				labels: {
+						fontColor: 'black',
+						fontSize: 20
+				}
+		},
+        scales: {
+					  yAxes: [{
+							ticks: {
+							fontSize: 20,
+						},
+					 	 scaleLabel: {
+							display: true,
+							labelString: 'tests failures',
+							fontSize: 35
+				   	}
+				}],
+            xAxes: [{
+                type: 'linear',
+								scaleLabel: {
+								display: true,
+								labelString: 'history timestamp',
+								fontSize: 35
+							},
+                position: 'bottom',
+								ticks: {
+                fontSize: 15
+            }
+            }]
+        }
+    }
+});
+function get_jenkins_data(job_name) {
+
+	var all_data = [];
+	for (var j = 0; j < results[job_name].length; j++)
+    {
+			var jdata = {};
+      jdata['x'] = results[job_name][j][0]
+    	jdata['y'] = results[job_name][j][1]
+      all_data.push(jdata);
+		}
+	//	alert(JSON.stringify(results));
+	//	alert(JSON.stringify(all_data));
+    return all_data;
+}
+
 
 <% end -%>

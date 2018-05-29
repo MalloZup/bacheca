@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require_tree ./jenkins_jobs
+//= require Chart.bundle.min.js
+//= require Chart.bundle.js
