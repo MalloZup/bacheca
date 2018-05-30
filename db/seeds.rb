@@ -14,8 +14,8 @@ require 'date'
 filtered_jobs = []
 
 module JenkinsClient
-  @client = JenkinsApi::Client.new(YAML.load_file(File.join(__dir__, 'login_jenkins.yml')))
-  config = (YAML.load_file(File.join(__dir__, 'jobs_jenkins.yml')))
+  @client = JenkinsApi::Client.new(YAML.load_file(File.join(__dir__, '../config/credentials_jenkins.yml')))
+  config = YAML.load_file(File.join(__dir__, '../config/jobs_jenkins.yml'))
   LIST_JOBS = config['jenkins_jobs']
 
   def self.filtered_jobs_from_yml(jobs)
@@ -27,7 +27,7 @@ module JenkinsClient
   end
 
   def self.timestamp_and_build_date(build_details)
-     [ build_details['timestamp'], Time.at(build_details['timestamp'] / 1000 ).to_datetime.to_s.split('+') [0] ]
+    [build_details['timestamp'], Time.at(build_details['timestamp'] / 1000).to_datetime.to_s.split('+') [0]]
   end
 
   def self.save_data(filtered_jobs)
@@ -41,7 +41,7 @@ module JenkinsClient
           json_resp = @client.api_get_request("/job/#{job_name}/#{build['number']}/testReport/")
           tests_failed = json_resp['failCount']
           build_timestamp, build_date = timestamp_and_build_date(@client.job.get_build_details(job_name, build['number']))
-          Job.create(name: job_name.to_s, build: build['number'].to_i, tests_failed: tests_failed.to_i, build_date: build_date, build_timestamp: build_timestamp)
+    #      Job.create(name: job_name.to_s, build: build['number'].to_i, tests_failed: tests_failed.to_i, build_date: build_date, build_timestamp: build_timestamp)
         rescue JenkinsApi::Exceptions::NotFound
           puts 'testReport not found. skipping'
         end
