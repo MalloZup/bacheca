@@ -23,7 +23,7 @@ gem install rails
 Add the jenkins credentials you will need to setup
 
 ```bash
-touch db/login_jenkins.yml
+touch config/credentials_jenkins.yml
 ```
 here is how it should like the `login_jenkins.yml`
 
