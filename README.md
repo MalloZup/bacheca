@@ -10,6 +10,9 @@ At moment is under development, feel free to contribute at any time.
 
 Feel free to take a look on milestones to see what is planed https://github.com/MalloZup/bacheca/milestones
 
+#### Prerequisites:
+
+Your Jenkins jobs need to expoert tests_results in junit format
 
 ## Setup for devel version ( only avaible currently)
 
@@ -42,10 +45,15 @@ Ensure that your jenkins user has access to the jobs
 
 2) Feed and create database schemas with
 
+For the first initialization, you can run manually:
 ```ruby
 rake db:migrate
 rake db:seed
 ```
+
+This project is using whenever gem, so you can activate the service for getting new data every hour with:
+
+```whenever --update-crontab```
 
 3) run it!
 ```ruby

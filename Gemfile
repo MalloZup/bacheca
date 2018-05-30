@@ -7,7 +7,11 @@ ruby '2.3.1'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# 
+
+# use whenever for update and fetch new data in db.
+gem 'whenever', require: false
+
+# Use jenkins library for getting jenkins results
 gem 'jenkins_api_client'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
