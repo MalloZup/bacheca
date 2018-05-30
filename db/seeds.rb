@@ -1,13 +1,5 @@
 # frozen_string_literal: true
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 require 'jenkins_api_client'
 require 'date'
 
@@ -36,7 +28,6 @@ module JenkinsClient
       builds.each do |build|
         # skip first build if not complete
         next if build['number'] == @client.job.get_current_build_number(job_name) && @client.job.get_current_build_status(job_name) == 'running'
-
         begin
           json_resp = @client.api_get_request("/job/#{job_name}/#{build['number']}/testReport/")
           tests_failed = json_resp['failCount']

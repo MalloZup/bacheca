@@ -23,12 +23,7 @@ for (var j = 0; j < results[job_name].length; j++)
  return all_data;
 }
 
-
-
-
-
 // OPTIONS and data
-
 // option used for the history failure chartjs
 var option_jenkins_linechart = {
   tooltips: {
@@ -59,7 +54,7 @@ var option_jenkins_linechart = {
             scaleLabel: {
             display: true,
             labelString: 'datetime',
-            fontSize: 35
+            fontSize: 40
           },
             position: 'bottom',
             ticks: {
