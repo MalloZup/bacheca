@@ -8,3 +8,4 @@ tmp/*
 .rspec
 /config/credentials_jenkins.yml
 .rake_tasks~
+/config/development.sqlite3
