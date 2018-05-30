@@ -1,9 +1,9 @@
 # Bacheca
 
-![bacheca](public/demo.png)
+![bacheca](.github_style/demo.png)
 
 ##### You can also select interactively via browser only specific jobs and axes will scale depending on data.
-![bacheca1](public/demo2.png)
+![bacheca1](.github_style/demo2.png)
 
 Bacheca will help to analyze in deep tests.
 At moment is under development, feel free to contribute at any time.
