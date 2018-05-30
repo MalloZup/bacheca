@@ -15,11 +15,11 @@ var linechartjenkins = document.getElementById("jenkins_datetime_failure_linecha
 
 for (var k = 0; k < unames.length; k++) {
  var job = {};
- job['label'] = unames[k]['name'];
- job['fill'] = true;
- job['data'] = jenkins_datetime_and_failure_to_linechart_axis(unames[k]['name']);
- job['backgroundColor'] = getRandomColor();
- job['borderColor'] = getRandomColor();
+ job.label = unames[k].name;
+ job.fill = true;
+ job.data = jenkins_datetime_and_failure_to_linechart_axis(unames[k].name);
+ job.backgroundColor = getRandomColor();
+ job.borderColor = getRandomColor();
  all_jenk_jobs.push(job);
 }
 

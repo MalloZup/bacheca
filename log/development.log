@@ -14321,3 +14321,207 @@ Processing by JobsController#index as HTML
 Completed 200 OK in 110ms (Views: 104.5ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:45:50 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:47:38 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 16.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:47:40 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:48:49 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 33ms (Views: 26.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:48:50 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 17.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:48:52 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 17.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:48:53 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 18.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:54:16 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:54:36 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:55:00 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:55:13 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 09:55:41 +0200
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "jobs"."name" FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.0-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-3.1-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "jobs"."build_timestamp", "jobs"."tests_failed", "jobs"."build_date" FROM "jobs" WHERE (name = 'manager-Head-cucumber-branch') ORDER BY "jobs"."build_timestamp" ASC[0m
+  ↳ app/controllers/jobs_controller.rb:8
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 20.2ms | ActiveRecord: 1.2ms)
+
+
