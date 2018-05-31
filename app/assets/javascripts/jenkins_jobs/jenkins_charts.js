@@ -31,7 +31,7 @@ var option_jenkins_linechart = {
  bodyFontSize: 35
 },
   legend: {
-    position: 'right',
+    position: 'bottom',
     labels: {
         fontColor: 'black',
         fontSize: 20

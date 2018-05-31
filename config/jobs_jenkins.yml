@@ -1,2 +1,2 @@
 ---
-jenkins_jobs: ["manager-3.1-cucumber", "manager-3.0-cucumber", "manager-Head-cucumber", "manager-Head-cucumber-branch"]
+jenkins_jobs: ["containers-containerd-upstream-integration-tests-openSUSE-Factory-btrfs-devel","storage-qa-teuthology-smoke-devel-6.0", "manager-3.1-cucumber", "manager-Head-cucumber", "storage-teuthology-suite"]
