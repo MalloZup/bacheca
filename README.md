@@ -3,6 +3,7 @@
 ![bacheca](.github_style/demo.png)
 
 ##### You can also select interactively via browser only specific jobs and axes will scale depending on data.
+##### The jobs of which you pick the tests are configurable via yml file!
 ![bacheca1](.github_style/demo2.png)
 
 Bacheca will help to analyze in deep tests.
@@ -12,9 +13,19 @@ Feel free to take a look on milestones to see what is planed https://github.com/
 
 #### Prerequisites:
 
-Your Jenkins jobs need to expoert tests_results in junit format
+Your Jenkins jobs need to expoert tests_results in junit format, otherwise bacheca cannot fetch results.
 
-## Setup for devel version ( only avaible currently)
+## Docker setups.
+
+You can have a look at the Dockerfile and have bacheca running in container!
+```bash
+
+docker build -t bacheca .
+docker run -it -p 9000:3000 bacheca
+```
+Then visit `http://localhost:9000/` ! up an runnning!
+
+### Manual Setup for devel version ( only avaible currently)
 
 0) you need to have installed rails.
 
