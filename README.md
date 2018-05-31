@@ -3,7 +3,6 @@
 ![bacheca](.github_style/demo.png)
 
 ##### You can also select interactively via browser only specific jobs and axes will scale depending on data.
-##### The jobs of which you pick the tests are configurable via yml file!
 ![bacheca1](.github_style/demo2.png)
 
 Bacheca will help to analyze in deep tests.
