@@ -26,13 +26,12 @@ touch config/credentials_jenkins.yml
 ```
 here is how it should like the `credentials_jenkins.yml`
 
-As password you can use a jenkins token.
 ```yml
 server_url: 'my_beautiful_jenkins_server.it'
 username: 'somename', 
 password: 'secret password'
 ```
-You can use also a `jenkins_token` for the `password`
+(As password you can use a jenkins token.)
 
 2) Choose the jobs for fetching and display data.
 
