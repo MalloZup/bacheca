@@ -11,7 +11,7 @@ At moment is under development, feel free to contribute at any time.
 
 Feel free to take a look on milestones to see what is planed https://github.com/MalloZup/bacheca/milestones
 
-### Prerequisites:
+#### Prerequisites:
 
 Your Jenkins jobs need to export tests_results in junit format, otherwise bacheca cannot fetch results.
 Currently bacheca support only junit, which is de-facto jenkins-standard.
@@ -45,8 +45,10 @@ jenkins_jobs: ["manager-3.1-cucumber", "saltstack-cooljobjenkins", "space-job", 
 ```
 Ensure that your jenkins user has access to the jobs
 
+## Run 
+You can now run the app with or without docker
 
-## Docker setups (reccomended)
+### Docker setups (reccomended)
 
 You can have a look at the Dockerfile and have bacheca running in container!
 
@@ -57,13 +59,15 @@ docker run -it -p 9000:3000 bacheca
 Then visit `http://localhost:9000/` ! up and runnning!
 
 
-## Without docker
+### Without docker
 
 0) you need to have installed rails.
 
 ```ruby
 gem install rails
 ```
+1) run `cd bacheca` and ` bundle install`
+
 2) Feed and create database schemas with
 
 For the first initialization, you can run manually:
@@ -71,7 +75,7 @@ For the first initialization, you can run manually:
 rake db:migrate
 rake db:seed
 ```
-
+3) start server with `rails server`
 
 ### Database data update 
 
