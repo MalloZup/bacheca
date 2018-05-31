@@ -50,16 +50,21 @@ var option_jenkins_linechart = {
     }],
         xAxes: [{
           type: 'time',
-          distribution: 'series',
-            scaleLabel: {
+          time: {
+      unit: 'day',
+      unitStepSize: 1,
+      displayFormats: {
+         'day': 'MMM DD YYYY'
+      }},
+        scaleLabel: {
             display: true,
             labelString: 'datetime',
             fontSize: 40
           },
-            position: 'bottom',
-            ticks: {
-            fontSize: 15
+          ticks: {
+            fontSize: 16
         }
+
         }]
     }
 }
