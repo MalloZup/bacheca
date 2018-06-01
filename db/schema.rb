@@ -10,16 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_25_144746) do
-
-  create_table "jobs", force: :cascade do |t|
-    t.string "name"
-    t.integer "build"
-    t.integer "tests_failed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "build_date"
-    t.bigint "build_timestamp"
+ActiveRecord::Schema.define(version: 20_180_525_144_746) do
+  create_table 'jobs', force: :cascade do |t|
+    t.string 'name'
+    t.integer 'build'
+    t.integer 'tests_failed'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'build_date'
+    t.bigint 'build_timestamp'
   end
-
 end

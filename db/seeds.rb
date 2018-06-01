@@ -9,7 +9,7 @@ module JenkinsClient
   @client = JenkinsApi::Client.new(YAML.load_file(File.join(__dir__, '../config/credentials_jenkins.yml')))
   config = YAML.load_file(File.join(__dir__, '../config/jobs_jenkins.yml'))
   LIST_JOBS = config['jenkins_jobs']
-
+  puts LIST_JOBS
   def self.filtered_jobs_from_yml(jobs)
     @client.job.list_all.each do |job|
       LIST_JOBS.each do |list_job|
