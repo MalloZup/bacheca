@@ -34,7 +34,7 @@ password: 'secret password'
 
 2) Choose the jobs for fetching and display data.
 
-There is already a `bacheca/config/job_jenkins.yml` file.
+There is already a `bacheca/config/jobs_jenkins.yml` file.
 
 Adapt the array with your jenkins jobs.
 
