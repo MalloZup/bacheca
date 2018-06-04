@@ -10,9 +10,8 @@ COPY . /bacheca
 # create tables in db
 RUN /bacheca/bin/rails db:migrate
 # update the db regularly
-RUN cron -f &
 RUN whenever --update-crontab
 # expose rails
 EXPOSE 3000
 # initialize database and run server
-CMD /bacheca/bin/rails db:seed && bundle exec rails server -b 0.0.0.0
+CMD /bacheca/bin/rails db:seed && cron && bundle exec rails server -b 0.0.0.0
