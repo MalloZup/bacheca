@@ -10,7 +10,7 @@ COPY . /bacheca
 # create tables in db
 RUN /bacheca/bin/rails db:migrate
 # update the db regularly
-RUN service cron start
+RUN cron -f &
 RUN whenever --update-crontab
 # expose rails
 EXPOSE 3000

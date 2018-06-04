@@ -1,4 +1,4 @@
-every 30.minute do
+every 15.minute do
   rake 'db:migrate'
   rake 'db:seed'
 end
