@@ -5,7 +5,7 @@ class JobsController < ApplicationController
     @ordered_tests_result_by_jobname = {}
     @jobs_uniq_name.each do |job|
       job_name = job['name']
-      @ordered_tests_result_by_jobname[job_name] = Job.where('name = ?', job['name']).order(:build_timestamp).pluck(:build_timestamp, :tests_failed, :build_date)
+      @ordered_tests_result_by_jobname[job_name] = Job.where('name = ?', job['name']).order(:build_timestamp).pluck(:build_timestamp, :tests_failed, :build_date, :build_url)
     end
   end
 end
