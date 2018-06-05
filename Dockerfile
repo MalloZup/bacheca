@@ -1,7 +1,7 @@
 FROM ruby:2.3.3
 # rails  and whenever cron
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs cron sqlite3 
-RUN mkdir /bacheca
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs cron sqlite3 rake
+RUN mkdir /bacheca 
 WORKDIR /bacheca
 COPY Gemfile /bacheca/Gemfile
 COPY Gemfile.lock /bacheca/Gemfile.lock
