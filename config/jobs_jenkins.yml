@@ -1,2 +1,2 @@
 ---
-jenkins_jobs: ["manager-3.0-cucumber", "manager-3.1-cucumber", "manager-Head-cucumber", "manager-Head-cucumber-sle15"]
+jenkins_jobs: ["manager-3.0-cucumber", "manager-3.1-cucumber", "manager-Head-cucumber", "manager-Head-cucumber-sle15", "manager-Head-cucumber-onpullreq"]
